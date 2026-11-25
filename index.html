@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoGuide helps you find out whether items can be reused or recycled, how to do it, and the environmental benefits.">
+  <title>EcoGuide – Smart Reuse & Recycling Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#" aria-label="EcoGuide home">
+        <span class="brand-mark" aria-hidden="true">♻</span>
+        <span class="brand-name">EcoGuide</span>
+      </a>
+      <div class="nav-links">
+        <a href="#search-section">Search</a>
+        <a href="#tips">Tips</a>
+        <a href="#about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Smart Reuse &amp; Recycling Guide</p>
+          <h1>Give everyday items a <span class="accent">second life</span>.</h1>
+          <p class="hero-lead">Search any item to discover if it can be reused or recycled, how to dispose of it responsibly, and the environmental benefit of making the right choice.</p>
+          <div class="hero-stats" aria-label="Highlights">
+            <div class="stat">
+              <span class="stat-value" id="stat-items">0</span>
+              <span class="stat-label">Items in guide</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">3R</span>
+              <span class="stat-label">Reduce · Reuse · Recycle</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">1</span>
+              <span class="stat-label">Smart search away</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="hero-card-header">
+            <span class="pill pill-green">Example</span>
+            <span class="hero-card-title">Plastic Bottle</span>
+          </div>
+          <ul class="hero-card-list">
+            <li><span class="icon">♻️</span><div><strong>Can be Reused?</strong><span>Yes</span></div></li>
+            <li><span class="icon">🔄</span><div><strong>Reuse Ideas</strong><span>Plant pot / Storage container</span></div></li>
+            <li><span class="icon">📍</span><div><strong>Where to Recycle</strong><span>Nearby recycling centre / collection point</span></div></li>
+            <li><span class="icon">🌱</span><div><strong>Environmental Benefit</strong><span>Reduces plastic waste and saves resources</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-section" id="search-section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Item Search</p>
+          <h2>What do you want to dispose of?</h2>
+          <p class="section-lead">Type an item name like "plastic bottle", "battery", or "old clothes".</p>
+        </div>
+
+        <div class="search-panel">
+          <form id="search-form" class="search-form" role="search">
+            <label class="sr-only" for="search-input">Search for an item</label>
+            <div class="search-input-wrap">
+              <span class="search-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              </span>
+              <input id="search-input" type="search" placeholder="Search for an item..." autocomplete="off" list="item-suggestions">
+              <datalist id="item-suggestions"></datalist>
+              <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+          </form>
+
+          <div class="category-row" aria-label="Browse by category">
+            <span class="category-label">Browse:</span>
+            <div id="category-chips" class="chips"></div>
+          </div>
+        </div>
+
+        <div id="result-region" class="result-region" aria-live="polite">
+          <div class="empty-state" id="empty-state">
+            <div class="empty-icon" aria-hidden="true">🔎</div>
+            <h3>Search for an item to get started</h3>
+            <p>You'll see reuse ideas, recycling guidance, disposal locations, and environmental benefits.</p>
+          </div>
+          <div id="result-card" class="result-card hidden"></div>
+          <div id="suggestions" class="suggestions hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tips-section" id="tips">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Waste Reduction Tips</p>
+          <h2>Small habits, big impact</h2>
+          <p class="section-lead">Reducing waste starts before something becomes trash.</p>
+        </div>
+        <div class="tips-grid">
+          <article class="tip-card">
+            <div class="tip-icon">🛍️</div>
+            <h3>Choose reusables</h3>
+            <p>Carry a reusable bag, bottle, and cup to avoid single-use items in your daily routine.</p>
+          </article>
+          <article class="tip-card">
+            <div class="tip-icon">🔧</div>
+            <h3>Repair before replacing</h3>
+            <p>Fixing electronics, clothes, and furniture extends their life and keeps valuable materials in use.</p>
+          </article>
+          <article class="tip-card">
+            <div class="tip-icon">🧼</div>
+            <h3>Clean before recycling</h3>
+            <p>Rinse containers and remove food residue so recyclable materials don't contaminate the batch.</p>
+          </article>
+          <article class="tip-card">
+            <div class="tip-icon">📦</div>
+            <h3>Donate what works</h3>
+            <p>Items in good condition can be donated, sold, or given away instead of being thrown out.</p>
+          </article>
+          <article class="tip-card">
+            <div class="tip-icon">🪫</div>
+            <h3>Handle hazardous waste carefully</h3>
+            <p>Batteries, paint, and e-waste need special drop-off points - never put them in regular bins.</p>
+          </article>
+          <article class="tip-card">
+            <div class="tip-icon">🌿</div>
+            <h3>Compost organics</h3>
+            <p>Food scraps and yard waste can become nutrient-rich compost instead of landfill methane.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About EcoGuide</p>
+          <h2>Make the responsible choice easy</h2>
+          <p>EcoGuide helps you quickly understand what to do with everyday items. By choosing reuse or proper recycling, you reduce landfill waste, conserve natural resources, and lower pollution.</p>
+        </div>
+        <div class="about-callout">
+          <h3>The 3Rs</h3>
+          <ul>
+            <li><strong>Reduce</strong> - Buy and use only what you need.</li>
+            <li><strong>Reuse</strong> - Give items another purpose before discarding.</li>
+            <li><strong>Recycle</strong> - Turn materials into new products responsibly.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">♻</span><span class="brand-name">EcoGuide</span></div>
+      <p>Smart Reuse &amp; Recycling Guide. Built to encourage responsible disposal.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
